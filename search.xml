@@ -4,18 +4,40 @@
   
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/02/10/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
+      <title></title>
+      <url>/2017/02/10/Hexo%E5%8D%9A%E5%AE%A2%E7%AE%80%E5%8D%95%E6%90%AD%E5%BB%BA/</url>
+      <content type="html"><![CDATA[<h2 id="一-需要准备"><a href="#一-需要准备" class="headerlink" title="一      需要准备"></a>一      需要准备</h2><p>Github账号,并且创建repository<br><a href="https://git-scm.com" target="_blank" rel="external">Git</a><br><a href="https://nodejs.org/en" target="_blank" rel="external">Node.js</a></p>
+<p>Git和Node.js都是默认安装就可以</p>
+<h3 id="二-操作步骤"><a href="#二-操作步骤" class="headerlink" title="二    操作步骤"></a>二    操作步骤</h3><h5 id="github操作"><a href="#github操作" class="headerlink" title="github操作"></a>github操作</h5><pre><code>1.通过 ssh-keygen -t rsa -C &quot;你的github邮箱&quot; 生成秘钥.
+2.在你的github的settings中找到SSH and GPG keys ,选择New SSH key,
+    把生成的is_rsa.pub文件中的全部内容拷贝到key中.
+</code></pre><h5 id="Git操作"><a href="#Git操作" class="headerlink" title="Git操作"></a>Git操作</h5><pre><code>1.选择任意文件夹作为你自己的博客文件夹,并在该目录下右键选择 Git Bash ,开始输入命令
+    npm install -g hexo-cli             //安装hexo
+    hexo init                           //初始化,再次操作后会生成一系列文件和文件夹
+    hexo g                              //生成本地的静态文件
+    hexo s                              //开启本地服务,现在就可以使用http://localhost:4000/ 在你本机预览界面
+
+2.博客内容同步到Github,命令行安装跟部署相关的hexo插件
+    npm install hexo-server --save                    //创建
+    npm install hexo-deployer-git --save              //安装自动部署发布工具
+
+3.编辑Hexo的配置文件:_config.yml
+    3.1 使用主题,依然还是命令行,选择主题可以到https://hexo.io/themes/挑选,将选择好的主题下载解压之后,存放到
+      themes文件夹中,在你的博客文件夹中找到_config.yml文件,修改主题  theme: 主题名称 (中间要有空格)
+    3.2 修改发布地址,在_config.yml找到deploy节点
+     type: git 
+     repo: git@github.com:Yang-Jay/Yang-Jay.github.io.git (这里是ssh的地址,不是https的)
+     branch: master
+
+4.重新部署,并提交
+
+    hexo clean                                //先清除掉已经生成的旧文件
+    hexo generate                             //再生成一次静态文件
+    hexo server                               //在本地预览下
+    hexo deploy                               //本地没问题之后，Ctrl + C 停掉本地预览，使用部署命令部署到 Github上
+
+    当出现INFO deploy done: git  就说明已经发布到Github上了,现在就可以到你的Github查看效果了
+</code></pre>]]></content>
     </entry>
     
   
