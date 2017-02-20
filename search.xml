@@ -4,11 +4,12 @@
   
     
     <entry>
-      <title><![CDATA[DaterialDesign Library (在2.2以上的设备使用MaterialDesign)]]></title>
-      <url>/2017/02/20/DaterialDesign%20Library%20%E4%BD%BF%E7%94%A8(%E5%9C%A82.2%E4%BB%A5%E4%B8%8A%E7%9A%84%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8MaterialDesign)%20/</url>
+      <title><![CDATA[MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign)]]></title>
+      <url>/2017/02/20/MaterialDesign%20Library%20(%E5%9C%A82.2%E4%BB%A5%E4%B8%8A%E7%9A%84%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8MaterialDesign)%20/</url>
       <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
-<li>从android 5.0出现的Daterial Design 设计风格 ,一直是android开发界的设计风向标,从 Google paly ,Google+ 等app就可看出来Google对其的重视可以应用程度,也不知道为什么没有在国内流行起来.</li>
-<li>在之前要想在自己的app上使用MaterialDesign风格的各种控件 无奈只能在5.0以上的设备实现,自从出现了DaterialDesign Library 现在也可以在2.2的设备上使用了              <a href="https://github.com/navasmdc/MaterialDesignLibrary" target="_blank" rel="external">项目地址</a></li>
+<li>从android 5.0出现的MaterialDesign的设计风格 ,一直是android开发界的设计风向标,从 Google paly ,Google+ 等app就可看出来Google对其的重视可以应用程度,也不知道为什么没有在国内流行起来.</li>
+<li>在之前要想在自己的app上使用MaterialDesign风格的各种控件 无奈只能在5.0以上的设备实现,自从出现了MaterialDesignLibrary 现在也可以在2.2的设备上使用了            </li>
+<li><a href="https://github.com/navasmdc/MaterialDesignLibrary" target="_blank" rel="external">项目地址</a></li>
 </ul>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
 <li><p>添加依赖</p>
