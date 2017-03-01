@@ -372,11 +372,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="Android-menu-使用"><a href="#Android-menu-使用" class="headerlink" title="Android menu 使用"></a>Android menu 使用</h2><h4 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h4><h4 id="创建菜单项"><a href="#创建菜单项" class="headerlink" title="创建菜单项"></a>创建菜单项</h4><p><img src="./images/menu_path_1.png" alt="enter description here" title="menu_path.png"><br><img src="./images/menu_item.png" alt="enter description here" title="menu_item.png"></p>
+        <h2 id="Android-menu-使用"><a href="#Android-menu-使用" class="headerlink" title="Android menu 使用"></a>Android menu 使用</h2><h4 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h4><h4 id="创建菜单项"><a href="#创建菜单项" class="headerlink" title="创建菜单项"></a>创建菜单项</h4><p><img src="/source/img/menu_path.png" alt="img"><br><img src="/source/img/menu_item.png" alt="img"></p>
 <p>1.在res文件夹下创建menu文件夹,用与存放xml文件,然后在menu 文件夹中创建menu.xml文件,编写menu文件<br>    2.menu.xml , 一个item就表示一个菜单项,每一个item 必不可少的就是id(唯一标识服)和title(item 名称)</p>
-<h4 id="重写onCreateOptionsMenu-Menu-menu-创建菜单"><a href="#重写onCreateOptionsMenu-Menu-menu-创建菜单" class="headerlink" title="重写onCreateOptionsMenu(Menu menu) 创建菜单"></a>重写onCreateOptionsMenu(Menu menu) 创建菜单</h4><p><img src="./images/createOptionsMenu.png" alt="enter description here" title="createOptionsMenu.png"></p>
+<h4 id="重写onCreateOptionsMenu-Menu-menu-创建菜单"><a href="#重写onCreateOptionsMenu-Menu-menu-创建菜单" class="headerlink" title="重写onCreateOptionsMenu(Menu menu) 创建菜单"></a>重写onCreateOptionsMenu(Menu menu) 创建菜单</h4><p><img src="/source/img/createOptionsMenu.png" alt="img"></p>
 <p>1.使用getMenuInflater() 获取MenuInflater 对象,通过inflate(@MenuRes int menuRes, Menu menu)就可以创建菜单了,inflate接受两个参数,第一个参数标识我们通过那个资源文件来创建文件,第二个参数表示我们常见出来的菜单项将添加到哪个menu对象上.</p>
-<h4 id="重写onOptionsitemSelected-MenuItem-item-实现菜单项的点击事件"><a href="#重写onOptionsitemSelected-MenuItem-item-实现菜单项的点击事件" class="headerlink" title="重写onOptionsitemSelected(MenuItem item) 实现菜单项的点击事件"></a>重写onOptionsitemSelected(MenuItem item) 实现菜单项的点击事件</h4><p><img src="./images/OptionsItemSelected.png" alt="enter description here" title="OptionsItemSelected.png"></p>
+<h4 id="重写onOptionsitemSelected-MenuItem-item-实现菜单项的点击事件"><a href="#重写onOptionsitemSelected-MenuItem-item-实现菜单项的点击事件" class="headerlink" title="重写onOptionsitemSelected(MenuItem item) 实现菜单项的点击事件"></a>重写onOptionsitemSelected(MenuItem item) 实现菜单项的点击事件</h4><p><img src="/source/img/OptionsItemSelected.png" alt="img"></p>
 <p>通过item.getItemId()即可获取到item项的资源ID,通过对比资源ID,即可进行后续操作</p>
 
     
