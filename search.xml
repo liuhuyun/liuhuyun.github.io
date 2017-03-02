@@ -23,9 +23,11 @@
 </ul>
 </li>
 <li>4.销毁Activity<ul>
-<li>Activity中调用 finish() 销毁当前的Activity <h4 id="Intent的使用"><a href="#Intent的使用" class="headerlink" title="Intent的使用"></a>Intent的使用</h4></li>
+<li>Activity中调用 finish() 销毁当前的Activity </li>
 </ul>
 </li>
+</ul>
+<h4 id="Intent的使用"><a href="#Intent的使用" class="headerlink" title="Intent的使用"></a>Intent的使用</h4><ul>
 <li>显式Intent<ul>
 <li>显式Intent ,顾名思义 是指确切的知道将要打开的Activity,</li>
 <li>使用方式,new Intent(Context, NextActivity.class);  </li>
@@ -94,13 +96,17 @@
 <li>当手机的内存不足的情况下,会销毁处于停止状态的Activity.为了优化用户体验, 所以这时数据的保存就显得尤为重要.</li>
 <li>在Activity销毁的时候必然会调用onSaveInstaceState(Bundle outState),可以通过bundle 以键值对的形式传递参数,</li>
 <li>当Activity再次重新创建的时候调用的onCreate(Bundle onSaveInstaceState) 取出Bundle所携带的参数</li>
-<li>因为第一次创建Activity的时候没有返回的参数,所以要在这里判断Bundle是否为null之后在进行下一步操作<h4 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h4></li>
+<li>因为第一次创建Activity的时候没有返回的参数,所以要在这里判断Bundle是否为null之后在进行下一步操作</li>
 </ul>
 </li>
+</ul>
+<h4 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h4><ul>
 <li>standard  每一Activity 默认的启动模式,是以先进后出的结构进行,每次打开一个新的Activity都会重新创建</li>
 <li>singleTop  单栈顶模式,在启动一个Activity时候判断是否在栈顶,如果不再栈顶,就会重新创建一个新的Activity实例,如果在栈顶,就会复用该栈顶的Activity 实例.</li>
 <li>singleTask 单任务栈模式, 再打开一个新的Activity的时候会判断该Activity是否在该任务栈存在,如果存在,就选择复用,不存在就会新创建一个Activity的实例</li>
-<li>singleInstance 单独的返回栈管理一个Activity <h4 id="Activity-的最佳实践"><a href="#Activity-的最佳实践" class="headerlink" title="Activity 的最佳实践"></a>Activity 的最佳实践</h4></li>
+<li>singleInstance 单独的返回栈管理一个Activity </li>
+</ul>
+<h4 id="Activity-的最佳实践"><a href="#Activity-的最佳实践" class="headerlink" title="Activity 的最佳实践"></a>Activity 的最佳实践</h4><ul>
 <li>知晓当前在那个Activity<ul>
 <li>创建BaseActivity 在onCreate()中调用getClass().getSimpleName(), 让所有的Activity都继承BaseActivity</li>
 </ul>
