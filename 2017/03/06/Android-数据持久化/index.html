@@ -380,8 +380,7 @@
 <li>文件存储是数据持久化的最基本的一种数据存储方式,,他不对存储的内容进行任何格式化处理.所有的数据都是原封不动的保存到文件中,适合存储一些简单的文本数据和二进制数据.</li>
 </ul>
 <ul>
-<li><p>文件读写</p>
-<ul>
+<li>文件读写<ul>
 <li>write</li>
 <li><img src="http://om4pdatog.bkt.clouddn.com/File_save.png" alt="img"><ul>
 <li>首先根据Context类中的一个openFileOutput()方法,把要保存的的数据存到文件中,参数一是文件名,参数二是文件的操作模式</li>
@@ -393,9 +392,11 @@
 </ul>
 </li>
 <li>read</li>
-<li><img src="http://om4pdatog.bkt.clouddn.com/File_read.png" alt="img"><h4 id="SharedPreferences"><a href="#SharedPreferences" class="headerlink" title="SharedPreferences"></a>SharedPreferences</h4></li>
+<li><img src="http://om4pdatog.bkt.clouddn.com/File_read.png" alt="img"></li>
 </ul>
 </li>
+</ul>
+<h4 id="SharedPreferences"><a href="#SharedPreferences" class="headerlink" title="SharedPreferences"></a>SharedPreferences</h4><ul>
 <li><p>不同于文件存储,SharedPreferences 保存的数据使用的键值对的形式.也就是说在保存一条数据的时候就要为这条数据添加一个Key,在获取这条数据的时候也是根据这个key来获取值,而且SharedPreferences 还支持不同的数据类型,保存为int类型,取出来的就是int类型,保存为String类型,取出来的时候就是Stirng类型</p>
 </li>
 <li><p>获取SharedPreferences 实例</p>

@@ -384,11 +384,11 @@
 </li>
 <li>现在Android引入了一中全新的布局方式来解决这个问题—百分比布局,这种布局不再使用以前warp-content,mtach-parent这种方式来指定控件的大小,而是可以直接指定控件在布局中所占的百分比,这样的话就可以实现平分布局或者是任意比例分割布局的效果了.</li>
 <li>由于LinearLayout 已经支持按比例分布控件,所以百分比布局只为FramLayout和RelativeLayout这两个控件进行了拓展,提供了PercentFramlayout 和PercentRelativeLayout</li>
-<li><p>由于百分比布局是新增布局,所以在使用的时候需要先在build.gradle添加 百分比布局的依赖,他就在support包下</p>
-<figure class="highlight plain"><figcaption><span>'com.android.support:percent:24.2.1'</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure>
-</li>
-<li><p>在使用的时候就和平常的布局一样,在他布局被的控件就可以使用layout_widthPercent layout_heightPercent 这来两个属性开控制控件在布局中所占的百分比了</p>
-</li>
+<li>由于百分比布局是新增布局,所以在使用的时候需要先在build.gradle添加 百分比布局的依赖,他就在support包下</li>
+</ul>
+<pre><code>``` compile &apos;com.android.support:percent:24.2.1&apos;```
+</code></pre><ul>
+<li>在使用的时候就和平常的布局一样,在他布局被的控件就可以使用layout_widthPercent layout_heightPercent 这来两个属性开控制控件在布局中所占的百分比了</li>
 </ul>
 <p> <img src="http://om4pdatog.bkt.clouddn.com/PercentRelativelayout.png" alt="img"><br> <img src="http://om4pdatog.bkt.clouddn.com/PercentRelativeLayout_View.png" alt="img"></p>
 
