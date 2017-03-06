@@ -189,7 +189,7 @@
 <li>由于LinearLayout 已经支持按比例分布控件,所以百分比布局只为FramLayout和RelativeLayout这两个控件进行了拓展,提供了PercentFramlayout 和PercentRelativeLayout</li>
 <li>由于百分比布局是新增布局,所以在使用的时候需要先在build.gradle添加 百分比布局的依赖,他就在support包下</li>
 </ul>
-<pre><code>``` compile &apos;com.android.support:percent:24.2.1&apos;```
+<pre><code><figure class="highlight plain"><figcaption><span>'com.android.support:percent:24.2.1'  </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure>
 </code></pre><ul>
 <li>在使用的时候就和平常的布局一样,在他布局被的控件就可以使用layout_widthPercent layout_heightPercent 这来两个属性开控制控件在布局中所占的百分比了</li>
 </ul>
