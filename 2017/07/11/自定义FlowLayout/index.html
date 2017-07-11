@@ -10,8 +10,6 @@
     
     <title>
         
-            探究Activity | 
-        
         lhy
     </title>
 
@@ -48,7 +46,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="探究Activity | lhy">
+    <meta property="og:title" content="lhy">
     <meta property="og:description" content="null">
 
     <!--[if lte IE 9]>
@@ -226,7 +224,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#探究Activity"><span class="post-toc-number">1.</span> <span class="post-toc-text">探究Activity</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity的基本使用"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Activity的基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Intent的使用"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Intent的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的生命周期"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">Activity 的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的启动模式"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">Activity 的启动模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的最佳实践"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">Activity 的最佳实践</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#tags-自定义View"><span class="post-toc-number">1.</span> <span class="post-toc-text">tags: 自定义View</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -262,7 +260,7 @@
         
     
             <p class="article-headline-p">
-                探究Activity
+                
             </p>
         </div>
 
@@ -281,7 +279,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>lhy</strong>
-        <span>3月 02, 2017</span>
+        <span>7月 11, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -305,7 +303,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/第一行代码/">第一行代码</a>
+        
     </ul>
     
 
@@ -321,7 +319,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=探究Activity&url=//2017/03/02/探究Activity/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=//2017/07/11/自定义FlowLayout/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -333,7 +331,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/07/11/自定义FlowLayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -342,7 +340,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/07/11/自定义FlowLayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -354,7 +352,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=探究Activity&summary=null&pics=/img/favicon.png&url=/2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=&summary=null&pics=/img/favicon.png&url=/2017/07/11/自定义FlowLayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -372,123 +370,32 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="探究Activity"><a href="#探究Activity" class="headerlink" title="探究Activity"></a>探究Activity</h2><h4 id="Activity的基本使用"><a href="#Activity的基本使用" class="headerlink" title="Activity的基本使用"></a>Activity的基本使用</h4><ul>
-<li>1.手动创建Activity<ul>
-<li>自定义class继承 appCompatActivity或是其他Activity类</li>
-<li>通过setContentView(“布局”)为Activity添加布局文件</li>
-<li>在AndroidManifest.xml 注册改 Activity</li>
+        <hr>
+<p>title: FlowLayout<br>date: 2017-07-11 14:53:28</p>
+<h2 id="tags-自定义View"><a href="#tags-自定义View" class="headerlink" title="tags: 自定义View"></a>tags: 自定义View</h2><p>##基本思路</p>
+<ul>
+<li>使用Line内部类的方式管理每一行中出现的View,当View在当前行放不下的时候换到下一行</li>
+<li><p>Line 内部需要控制的参数包括当前行的高度,当前行的最大宽度,当前行的已使用宽度,子View的横向之间的间隔,当前行的View集合</p>
+<ul>
+<li>addView();添加子View (确定行高,行最大宽度,已使用的宽度)</li>
+<li>canAddView();判断View是否可以再当前行内继续添加</li>
+<li>layout();    指定子View的显示位置,循环测量子View(平均分布),每个子View的间隔=view.getMeasureWidth()+space</li>
 </ul>
 </li>
-<li>2.在Activity中使用Toast<ul>
-<li>Toast.makeText(“上下文,Context的子类”,”显示的字符串”,Toast.LENGTH_SHORT).show();     </li>
-</ul>
-</li>
-<li>3.在Activity中使用Menu<ul>
-<li>创建item菜单</li>
-<li>在Activity中重写onCreateOptionsMenu(Menu menu),加载资源文件到menu上,当返回值为true 的时候 menu 才会显示 </li>
-</ul>
-</li>
-<li>4.销毁Activity<ul>
-<li>Activity中调用 finish() 销毁当前的Activity </li>
+<li><p>onMeasure();</p>
+<ul>
+<li>遍历子View,测量子View,添加子View到Line对象中,在讲Linedu对象添加到Lines集合中</li>
+<li>测量自己</li>
 </ul>
 </li>
 </ul>
-<h4 id="Intent的使用"><a href="#Intent的使用" class="headerlink" title="Intent的使用"></a>Intent的使用</h4><ul>
-<li>显式Intent<ul>
-<li>显式Intent ,顾名思义 是指确切的知道将要打开的Activity,</li>
-<li>使用方式,new Intent(Context, NextActivity.class);  </li>
-</ul>
-</li>
-<li>隐式Intent<ul>
-<li>隐式Intent ,是指在没有确定知道要跳转的Activity,使用了一系列的action,category,由系统去分析这个Intent,找到合适的Activity并启动</li>
-<li>在activtiy指定了action 或是categroy 时,启动Activity的Intent必须都与该Activity参数都一一对应时候才会启动该Activity</li>
-<li>category 的默认参数一般不用写,也可以启动</li>
-<li>比如启动系统浏览器打开百度<ul>
-<li>Intent  intent=new Intent(Intent.ACTION.VIEW);</li>
-<li>intetn.setData(Uri.parse(“<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>“))</li>
-<li>staetActivity(intent);</li>
-</ul>
-</li>
-<li>比如启动打电话<ul>
-<li>Intent intent=new Intent(Intent.ACTION.DLAL);</li>
-<li>intent.setData(Uri.parse(“tel:10086”));</li>
-<li>startActivity(intent);   </li>
+<ul>
+<li>onLayout();    <ul>
+<li>只负责高度的展示,宽度和子View的位置让Line执行</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>向下一个Activity传递参数<ul>
-<li>传递参数可使用intent.putExtra(“KEY”,”value”)</li>
-<li>该方法重载,可以传递多种数据类型</li>
-<li>可以使用传递Bundle对象</li>
-<li>要想传递其他的对象类型的参数的时候,该类必须实现Serializable 或者 Parcelable</li>
-<li>在启动的Activity 中通过 getIntent() 获取Intent对象<ul>
-<li>在通过intent对象,获取传递过来的参数,比如传递额String类型的参数,就通过intent.getStringExtra(“KEY”)</li>
-<li>传递的整数,就通过intent.getIntExtra(“KEY”); </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>返回数据给上一个Activity<ul>
-<li>在返回给上一个Activity参数中用到的是一个requesCode 和一个 resultCode</li>
-<li>requestCode用于标记是从哪个Activiyt启动的</li>
-<li>resultCode用于标记是从哪个Activity返回的</li>
-<li>在需要返回个上一个Activty数据这种情况的时候,启动Activity的方式就不是原来的startActivity(intent)了</li>
-<li>具体使用<ul>
-<li>ActivityOne    startActivitForResutl(intent,requestCode)   requestCode   随意指定,但一定要唯一</li>
-<li>ActivityTwo   setResult( resultCode ,intent);    finish;  resultCode    随意指定,但一定要唯一</li>
-<li>当ActivityTwo 销毁的时候就会调用ActivityOne 中的onActivityResult(int requestCode,int resultCode,Intent data)</li>
-<li>在判断requestCode 和 resultCode 都准确无误的情况下,就可以使用date.getStringExtra(“KEY”),获取返回的数据</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Activity-的生命周期"><a href="#Activity-的生命周期" class="headerlink" title="Activity 的生命周期"></a>Activity 的生命周期</h4><ul>
-<li>完整的生命周期<ul>
-<li>onCreate() &gt; onStart() &gt; onResume &gt; onPause() &gt; onStop() &gt; onDestroy()</li>
-<li>onRestatrt();</li>
-</ul>
-</li>
-<li>不同状态下的方法回调<ul>
-<li>启动ActivityOne   onCreate() &gt; onStart() &gt; onResume();</li>
-<li>在ActivityOne 中启动 ActivityTwo   ActivityOne 中会调用 onPause()  &gt; onStop() </li>
-<li>从ActivityTwo 中返回 ActivityOne  ActivityOne中会调用onRestart() &gt; onStart() &gt; onResume();</li>
-<li>在ActivtiyOne中按下返回键时 ActivityOne 中会调用onPause() &gt; onStop() &gt; onDestroy();</li>
-<li>如果在新打开的Activity没有完全的遮挡住下面的Activity的时候, 下面的Activity只会回调 onPause(),还是属于可见的状态,再次返回的时候也只是会回调onResume()</li>
-</ul>
-</li>
-<li>Activity的被销毁时的数据存储<ul>
-<li>当手机的内存不足的情况下,会销毁处于停止状态的Activity.为了优化用户体验, 所以这时数据的保存就显得尤为重要.</li>
-<li>在Activity销毁的时候必然会调用onSaveInstaceState(Bundle outState),可以通过bundle 以键值对的形式传递参数,</li>
-<li>当Activity再次重新创建的时候调用的onCreate(Bundle onSaveInstaceState) 取出Bundle所携带的参数</li>
-<li>因为第一次创建Activity的时候没有返回的参数,所以要在这里判断Bundle是否为null之后在进行下一步操作</li>
-</ul>
-</li>
-</ul>
-<h4 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h4><ul>
-<li>standard  每一Activity 默认的启动模式,是以先进后出的结构进行,每次打开一个新的Activity都会重新创建</li>
-<li>singleTop  单栈顶模式,在启动一个Activity时候判断是否在栈顶,如果不再栈顶,就会重新创建一个新的Activity实例,如果在栈顶,就会复用该栈顶的Activity 实例.</li>
-<li>singleTask 单任务栈模式, 再打开一个新的Activity的时候会判断该Activity是否在该任务栈存在,如果存在,就选择复用,不存在就会新创建一个Activity的实例</li>
-<li>singleInstance 单独的返回栈管理一个Activity </li>
-</ul>
-<h4 id="Activity-的最佳实践"><a href="#Activity-的最佳实践" class="headerlink" title="Activity 的最佳实践"></a>Activity 的最佳实践</h4><ul>
-<li>知晓当前在那个Activity<ul>
-<li>创建BaseActivity 在onCreate()中调用getClass().getSimpleName(), 让所有的Activity都继承BaseActivity</li>
-</ul>
-</li>
-<li>安全的退出Activity<ul>
-<li>创建ActivtiController . 添加addActivity(Activity activity) 并在BaseActivity 的onCreate() 中调用</li>
-<li>添加removeActivity(Activity activity) 在BaseActivity的onDestroy()中调用</li>
-<li>创建finishAllActivity() 在需要关闭所有Activity的地方调用即可</li>
-</ul>
-</li>
-<li>启动Activity的最佳写法<ul>
-<li>将打开Activity所需要用到的参数,以方法的形式封装,只把需要用到的参数对外暴露,简单,明了</li>
-</ul>
-</li>
-</ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">public class FlowLayout extends ViewGroup &#123;</div><div class="line">   /**</div><div class="line">    * 存储行的集合，管理行</div><div class="line">    */</div><div class="line">   private List&lt;Line&gt; mLines = new ArrayList&lt;&gt;();</div><div class="line">   /**</div><div class="line">    * 水平和竖直的间距</div><div class="line">    */</div><div class="line">   private float vertical_space;</div><div class="line">   private float horizontal_space;</div><div class="line"></div><div class="line">   // 当前行的指针</div><div class="line">   private Line mCurrentLine;</div><div class="line"></div><div class="line">   // 行的最大宽度，除去边距的宽度</div><div class="line">   private int mMaxWidth;</div><div class="line"></div><div class="line">   public FlowLayout(Context context) &#123;</div><div class="line">       this(context, null);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   public FlowLayout(Context context, AttributeSet attrs) &#123;</div><div class="line">       super(context, attrs);</div><div class="line"></div><div class="line">       // 获取自定义属性</div><div class="line">       TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout);</div><div class="line">       horizontal_space = array.getDimension(R.styleable.FlowLayout_width_space,0);</div><div class="line">       vertical_space =  array.getDimension(R.styleable.FlowLayout_height_space,0);</div><div class="line">       array.recycle();</div><div class="line"></div><div class="line">   &#125;</div><div class="line"></div><div class="line">   @Override</div><div class="line">   protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div class="line">       // 每次测量之前都先清空集合，不让会覆盖掉以前</div><div class="line">       mLines.clear();</div><div class="line">       mCurrentLine = null;</div><div class="line"></div><div class="line">       // 获取总宽度</div><div class="line">       int width = MeasureSpec.getSize(widthMeasureSpec);</div><div class="line">       // 计算最大的宽度</div><div class="line">       mMaxWidth = width - getPaddingLeft() - getPaddingRight();</div><div class="line"></div><div class="line">       // ******************** 测量孩子 ********************</div><div class="line">       // 遍历获取孩子</div><div class="line">       int childCount = this.getChildCount();</div><div class="line">       for (int i = 0; i &lt; childCount; i++) &#123;</div><div class="line">           View childView = getChildAt(i);</div><div class="line">           // 测量孩子</div><div class="line">           measureChild(childView, widthMeasureSpec, heightMeasureSpec);</div><div class="line"></div><div class="line">           // 测量完需要将孩子添加到管理行的孩子的集合中，将行添加到管理行的集合中</div><div class="line"></div><div class="line">           if (mCurrentLine == null) &#123;</div><div class="line">               // 初次添加第一个孩子的时候</div><div class="line">               mCurrentLine = new Line(mMaxWidth, horizontal_space);</div><div class="line">               // 添加孩子</div><div class="line">               mCurrentLine.addView(childView);</div><div class="line">               // 添加行</div><div class="line">               mLines.add(mCurrentLine);</div><div class="line"></div><div class="line">           &#125; else &#123;</div><div class="line">               // 行中有孩子的时候，判断时候能添加</div><div class="line">               if (mCurrentLine.canAddView(childView)) &#123;</div><div class="line">                   // 继续往该行里添加</div><div class="line">                   mCurrentLine.addView(childView);</div><div class="line">               &#125; else &#123;</div><div class="line">                   //  添加到下一行</div><div class="line">                   mCurrentLine = new Line(mMaxWidth, horizontal_space);</div><div class="line">                   mCurrentLine.addView(childView);</div><div class="line">                   mLines.add(mCurrentLine);</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       // ******************** 测量自己 *********************</div><div class="line">       // 测量自己只需要计算高度，宽度肯定会被填充满的</div><div class="line">       int height = getPaddingTop() + getPaddingBottom();</div><div class="line">       for (int i = 0; i &lt; mLines.size(); i++) &#123;</div><div class="line">           // 所有行的高度</div><div class="line">           height += mLines.get(i).height;</div><div class="line">       &#125;</div><div class="line">       // 所有竖直的间距</div><div class="line">       height += (mLines.size() - 1) * vertical_space;</div><div class="line"></div><div class="line">       // 测量</div><div class="line">       setMeasuredDimension(width, height);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   @Override</div><div class="line">   protected void onLayout(boolean changed, int l, int t, int r, int b) &#123;</div><div class="line">       // 这里只负责高度的位置，具体的宽度和子孩子的位置让具体的行去管理</div><div class="line">       l = getPaddingLeft();</div><div class="line">       t = getPaddingTop();</div><div class="line">       for (int i = 0; i &lt; mLines.size(); i++) &#123;</div><div class="line">           // 获取行</div><div class="line">           Line line = mLines.get(i);</div><div class="line">           // 管理</div><div class="line">           line.layout(t, l);</div><div class="line"></div><div class="line">           // 更新高度</div><div class="line">           t += line.height;</div><div class="line">           if (i != mLines.size() - 1) &#123;</div><div class="line">               // 不是最后一条就添加间距</div><div class="line">               t += vertical_space;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   /**</div><div class="line">    * 内部类，行管理器，管理每一行的孩子</div><div class="line">    */</div><div class="line">   public class Line &#123;</div><div class="line">       // 定义一个行的集合来存放子View</div><div class="line">       private List&lt;View&gt; views = new ArrayList&lt;&gt;();</div><div class="line">       // 行的最大宽度</div><div class="line">       private int maxWidth;</div><div class="line">       // 行中已经使用的宽度</div><div class="line">       private int usedWidth;</div><div class="line">       // 行的高度</div><div class="line">       private int height;</div><div class="line">       // 孩子之间的距离</div><div class="line">       private float space;</div><div class="line"></div><div class="line">       // 通过构造初始化最大宽度和边距</div><div class="line">       public Line(int maxWidth, float horizontalSpace) &#123;</div><div class="line">           this.maxWidth = maxWidth;</div><div class="line">           this.space = horizontalSpace;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       /**</div><div class="line">        * 往集合里添加孩子</div><div class="line">        */</div><div class="line">       public void addView(View view) &#123;</div><div class="line">           int childWidth = view.getMeasuredWidth();</div><div class="line">           int childHeight = view.getMeasuredHeight();</div><div class="line"></div><div class="line">           // 更新行的使用宽度和高度</div><div class="line">           if (views.size() == 0) &#123;</div><div class="line">               // 集合里没有孩子的时候</div><div class="line">               if (childWidth &gt; maxWidth) &#123;</div><div class="line">                   usedWidth = maxWidth;</div><div class="line">                   height = childHeight;</div><div class="line">               &#125; else &#123;</div><div class="line">                   usedWidth = childWidth;</div><div class="line">                   height = childHeight;</div><div class="line">               &#125;</div><div class="line">           &#125; else &#123;</div><div class="line">               usedWidth += childWidth + space;</div><div class="line">               height = childHeight &gt; height ? childHeight : height;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           // 添加孩子到集合</div><div class="line">           views.add(view);</div><div class="line">       &#125;</div><div class="line"></div><div class="line"></div><div class="line">       /**</div><div class="line">        * 判断当前的行是否能添加孩子</div><div class="line">        *</div><div class="line">        * @return</div><div class="line">        */</div><div class="line">       public boolean canAddView(View view) &#123;</div><div class="line">           // 集合里没有数据可以添加</div><div class="line">           if (views.size() == 0) &#123;</div><div class="line">               return true;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           // 最后一个孩子的宽度大于剩余宽度就不添加</div><div class="line">           if (view.getMeasuredWidth() &gt; (maxWidth - usedWidth - space)) &#123;</div><div class="line">               return false;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           // 默认可以添加</div><div class="line">           return true;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       /**</div><div class="line">        * 指定孩子显示的位置</div><div class="line">        *</div><div class="line">        * @param t</div><div class="line">        * @param l</div><div class="line">        */</div><div class="line">       public void layout(int t, int l) &#123;</div><div class="line">           // 平分剩下的空间</div><div class="line">           int avg = (maxWidth - usedWidth) / views.size();</div><div class="line"></div><div class="line">           // 循环指定孩子位置</div><div class="line">           for (View view : views) &#123;</div><div class="line">               // 获取宽高</div><div class="line">               int measuredWidth = view.getMeasuredWidth();</div><div class="line">               int measuredHeight = view.getMeasuredHeight();</div><div class="line">               // 重新测量</div><div class="line">               view.measure(MeasureSpec.makeMeasureSpec(measuredWidth + avg, MeasureSpec.EXACTLY),</div><div class="line">                       MeasureSpec.makeMeasureSpec(measuredHeight, MeasureSpec.EXACTLY));</div><div class="line">               // 重新获取宽度值</div><div class="line">               measuredWidth = view.getMeasuredWidth();</div><div class="line"></div><div class="line">               int top = t;</div><div class="line">               int left = l;</div><div class="line">               int right = measuredWidth + left;</div><div class="line">               int bottom = measuredHeight + top;</div><div class="line">               // 指定位置</div><div class="line">               view.layout(left, top, right, bottom);</div><div class="line"></div><div class="line">               // 更新数据</div><div class="line">               l += measuredWidth + space;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
     
 
     
@@ -510,21 +417,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/03/Android中引入百分比布局/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/01/Android menu 使用/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/08/全局大喇叭-广播详解/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
