@@ -6,7 +6,64 @@
     <entry>
       <title><![CDATA[Kotlin-01]]></title>
       <url>/2017/07/13/Kotlin-01/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h1 id="Kotlin-01"><a href="#Kotlin-01" class="headerlink" title="Kotlin-01"></a>Kotlin-01</h1><h2 id="基本语法和Java的区别"><a href="#基本语法和Java的区别" class="headerlink" title="基本语法和Java的区别"></a>基本语法和Java的区别</h2><h4 id="字段声明"><a href="#字段声明" class="headerlink" title="字段声明"></a>字段声明</h4><pre><code>在java中
+
+private    class Person{
+
+privata String name;
+private int age;
+
+}
+
+
+在 kotlin中
+
+cless Person{
+
+val name: String
+val age:Int
+
+}
+</code></pre><ul>
+<li>kotlin不同之处<ul>
+<li>没有private ,protected,public 这种权限修饰的关键字,取而代之的是 val(常量) 和 var(变量)修饰符</li>
+<li>所有的类型首字母大写</li>
+<li>最终的格式(修饰符 变量名 : 类型 =变量的值  ) (没有最后 “;”  符号)</li>
+</ul>
+</li>
+</ul>
+<h4 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h4><pre><code>在Java中 
+
+private class Student extends Person{
+
+
+private double height;
+private int coures;
+
+
+}
+
+
+
+在Kotlin中
+首先想要被继承的类要在class 之前加上 open 关键字才可以继承
+
+open cless Person{
+
+val name: String
+val age:Int
+
+}
+
+
+class Student :Persion(){
+
+
+val height:Double
+val coures:Int
+
+}
+</code></pre>]]></content>
     </entry>
     
     <entry>

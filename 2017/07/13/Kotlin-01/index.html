@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Kotlin-01"><span class="post-toc-number">1.</span> <span class="post-toc-text">Kotlin-01</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本语法和Java的区别"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基本语法和Java的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字段声明"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">字段声明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#继承关系"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">继承关系</span></a></li></ol></li></ol></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -372,7 +372,64 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h1 id="Kotlin-01"><a href="#Kotlin-01" class="headerlink" title="Kotlin-01"></a>Kotlin-01</h1><h2 id="基本语法和Java的区别"><a href="#基本语法和Java的区别" class="headerlink" title="基本语法和Java的区别"></a>基本语法和Java的区别</h2><h4 id="字段声明"><a href="#字段声明" class="headerlink" title="字段声明"></a>字段声明</h4><pre><code>在java中
+
+private    class Person{
+
+privata String name;
+private int age;
+
+}
+
+
+在 kotlin中
+
+cless Person{
+
+val name: String
+val age:Int
+
+}
+</code></pre><ul>
+<li>kotlin不同之处<ul>
+<li>没有private ,protected,public 这种权限修饰的关键字,取而代之的是 val(常量) 和 var(变量)修饰符</li>
+<li>所有的类型首字母大写</li>
+<li>最终的格式(修饰符 变量名 : 类型 =变量的值  ) (没有最后 “;”  符号)</li>
+</ul>
+</li>
+</ul>
+<h4 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h4><pre><code>在Java中 
+
+private class Student extends Person{
+
+
+private double height;
+private int coures;
+
+
+}
+
+
+
+在Kotlin中
+首先想要被继承的类要在class 之前加上 open 关键字才可以继承
+
+open cless Person{
+
+val name: String
+val age:Int
+
+}
+
+
+class Student :Persion(){
+
+
+val height:Double
+val coures:Int
+
+}
+</code></pre>
     
 
     
