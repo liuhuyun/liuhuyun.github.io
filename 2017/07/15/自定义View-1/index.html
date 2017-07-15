@@ -10,7 +10,7 @@
     
     <title>
         
-            MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign) | 
+            自定义View -1 | 
         
         lhy
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign) | lhy">
+    <meta property="og:title" content="自定义View -1 | lhy">
     <meta property="og:description" content="null">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义View-之-绘制"><span class="post-toc-number">1.</span> <span class="post-toc-text">自定义View 之 绘制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义绘制知识的4个级别"><span class="post-toc-number">2.</span> <span class="post-toc-text">自定义绘制知识的4个级别</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas的drawXXX-和-Paint的基本使用"><span class="post-toc-number">3.</span> <span class="post-toc-text">Canvas的drawXXX()和 Paint的基本使用</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -262,7 +262,7 @@
         
     
             <p class="article-headline-p">
-                MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign)
+                自定义View -1
             </p>
         </div>
 
@@ -281,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>lhy</strong>
-        <span>2月 20, 2017</span>
+        <span>7月 15, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -305,7 +305,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/自定义view/">自定义view</a>
     </ul>
     
 
@@ -321,7 +321,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign)&url=//2017/02/20/MaterialDesign Library (在2.2以上的设备使用MaterialDesign) /index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自定义View -1&url=//2017/07/15/自定义View-1/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -333,7 +333,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/02/20/MaterialDesign Library (在2.2以上的设备使用MaterialDesign) /index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/07/15/自定义View-1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -342,7 +342,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/02/20/MaterialDesign Library (在2.2以上的设备使用MaterialDesign) /index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/07/15/自定义View-1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -354,7 +354,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=MaterialDesignLibrary (在2.2以上的设备使用MaterialDesign)&summary=null&pics=/img/favicon.png&url=/2017/02/20/MaterialDesign Library (在2.2以上的设备使用MaterialDesign) /index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=自定义View -1&summary=null&pics=/img/favicon.png&url=/2017/07/15/自定义View-1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -372,46 +372,56 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
-<li>从android 5.0出现的MaterialDesign的设计风格 ,一直是android开发界的设计风向标,从 Google paly ,Google+ 等app就可看出来Google对其的重视可以应用程度,也不知道为什么没有在国内流行起来.</li>
-<li>在之前要想在自己的app上使用MaterialDesign风格的各种控件 无奈只能在5.0以上的设备实现,自从出现了MaterialDesignLibrary 现在也可以在2.2的设备上使用了            </li>
-<li><a href="https://github.com/navasmdc/MaterialDesignLibrary" target="_blank" rel="external">项目地址</a></li>
+        <h2 id="自定义View-之-绘制"><a href="#自定义View-之-绘制" class="headerlink" title="自定义View 之 绘制"></a>自定义View 之 绘制</h2><ul>
+<li>自定义View的绘制主要是重写绘制的方法 ,其中最长用的就是onDraw()方法</li>
+<li>绘制的关键是Canvas的使用<ul>
+<li>Canvas的绘制类方法 : drawXXX() 关键参数 Paint</li>
+<li>Canvas的辅助类方法 : Canvas的裁切和几何变换</li>
+<li>可以使用不同的绘制方法来控制遮盖关系</li>
 </ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
-<li><p>添加依赖</p>
-<pre><code>compile &apos;com.github.navasmdc:MaterialDesign:1.5@aar&apos;
-</code></pre></li>
-<li><p>MaterialDesign Library  包含了众多的控件,下面挑选几个常用的</p>
 </li>
 </ul>
-<ul>
-<li>Button       实现了水波纹效果</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">        </div><div class="line">&lt;com.gc.materialdesign.views.ButtonFlat        透明背景的button,background属性修改的是Button的Text的Color</div><div class="line">               android:id=&quot;@+id/buttonflat&quot;</div><div class="line">               android:layout_width=&quot;wrap_content&quot;</div><div class="line">               android:layout_height=&quot;wrap_content&quot;</div><div class="line">               android:background=&quot;#1E88E5&quot;</div><div class="line">               android:text=&quot;Button&quot; /&gt;</div><div class="line"></div><div class="line">   &lt;com.gc.materialdesign.views.ButtonRectangle       这里的background属性修改的才是Button的background</div><div class="line">               android:id=&quot;@+id/button&quot;</div><div class="line">               android:layout_width=&quot;wrap_content&quot;</div><div class="line">               android:layout_height=&quot;wrap_content&quot;</div><div class="line">               android:background=&quot;#1E88E5&quot;</div><div class="line">               android:text=&quot;Button&quot; /&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>Progress</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;com.gc.materialdesign.views.ProgressBarCircularIndeterminate     实现5.0的圆形ProgressBar效果</div><div class="line">               android:id=&quot;@+id/progressBarCircularIndeterminate&quot;</div><div class="line">               android:layout_width=&quot;32dp&quot;</div><div class="line">               android:layout_height=&quot;32dp&quot;</div><div class="line">               android:background=&quot;#1E88E5&quot; /&gt;</div><div class="line"></div><div class="line">   &lt;com.gc.materialdesign.views.ProgressBarIndeterminate      实现5.0的水平ProgressBar效果</div><div class="line">               android:id=&quot;@+id/progressBarIndeterminate&quot;</div><div class="line">               android:layout_width=&quot;fill_parent&quot;</div><div class="line">               android:layout_height=&quot;wrap_content&quot;</div><div class="line">               android:background=&quot;#1E88E5&quot; /&gt;</div><div class="line"></div><div class="line">   &lt;com.gc.materialdesign.views.ProgressBarIndeterminateDeterminate    实现5.0的水平ProgressBar效果</div><div class="line">               android:id=&quot;@+id/progressBarIndeterminateDeterminate&quot;</div><div class="line">               android:layout_width=&quot;fill_parent&quot;</div><div class="line">               android:layout_height=&quot;wrap_content&quot;</div><div class="line">               android:background=&quot;#1E88E5&quot; /&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>Slider </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;com.gc.materialdesign.views.Slider      普通的Slider</div><div class="line">            android:id=&quot;@+id/slider&quot;</div><div class="line">            android:layout_width=&quot;fill_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:background=&quot;#1E88E5&quot;</div><div class="line">            materialdesign:max=&quot;50&quot;</div><div class="line">            materialdesign:min=&quot;0&quot;</div><div class="line">             /&gt;</div><div class="line"></div><div class="line">&lt;com.gc.materialdesign.views.Slider   拖动带指示当前进度的Slider</div><div class="line">            android:id=&quot;@+id/slider&quot;</div><div class="line">            android:layout_width=&quot;fill_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:background=&quot;#1E88E5&quot;</div><div class="line">            materialdesign:max=&quot;50&quot;</div><div class="line">            materialdesign:min=&quot;0&quot;</div><div class="line">            materialdesign:showNumberIndicator=&quot;true&quot;/&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>SnackBar</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">SnackBar snackbar = new SnackBar(Activity activity, String text, String buttonText, View.OnClickListener onClickListener);</div><div class="line">snackbar.show();</div></pre></td></tr></table></figure>
-<ul>
-<li>Dialog</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">Dialog dialog = new Dialog(Context context,String title, String message);</div><div class="line">dialog.show();</div></pre></td></tr></table></figure>
-<ul>
-<li>Color selector</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">      </div><div class="line">ColorSelector colorSelector = new ColorSelector(Context context,int intialColor, OnColorSelectedListener onColorSelectedListener);</div><div class="line">   colorSelector.show();</div></pre></td></tr></table></figure>
-<ul>
-<li>如果出现 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">     </div><div class="line">java.lang.IllegalArgumentException: width and height must be &gt; 0 </div><div class="line">   可以通过添加    compile&apos;com.nineoldandroids:library:2.4.0&apos; 来解决</div></pre></td></tr></table></figure>
+<h2 id="自定义绘制知识的4个级别"><a href="#自定义绘制知识的4个级别" class="headerlink" title="自定义绘制知识的4个级别"></a>自定义绘制知识的4个级别</h2><p>1  Canvas的 drawXXX();</p>
+<p>2  Paint;</p>
+<p>3  Canvas的裁切和几何变换</p>
+<p>4  使用不同的绘制方法控制遮盖关系</p>
+<h2 id="Canvas的drawXXX-和-Paint的基本使用"><a href="#Canvas的drawXXX-和-Paint的基本使用" class="headerlink" title="Canvas的drawXXX()和 Paint的基本使用"></a>Canvas的drawXXX()和 Paint的基本使用</h2><pre><code>Canvas.drawColor(@ColorInt int color)
+        填充颜色          
+Canvas.drawRGB(int r,int g,int b)
+        填充颜色 
+Canvas.drawARGB(int a,int r,int g,int b)
+        填充颜色
+Canvas.drawCircle(float centerX,float centerY,float radius,Paint paint)
+        画圆   (圆心坐标,半径,paint)
+Canvas.drawRect(float left,float top,float right,float bottom,Paint paint)
+        画矩形   (矩形左上角坐标,矩形右下角坐标,paint)
+Canvas.drawPoint(float x,float y,Paint paint)
+        画点   (坐标,paint)
+Canvas.drawPoints(float[] pts,int offset,int count,Paint paint)
+        画多个点   (坐标数组,开始的组数,绘制的组数,paint)
+Canvas.drawOval(float left,float top,float right,float ,bottom,Paint paint)
+        画椭圆   (椭圆坐标,paint)
+Canvas.drawLine(float startX,float startY,float stopX, float stopY,Paint paint)
+        画线   (开始坐标,结束坐标,paint)
+Canvas.drawRoundRect(float left,float top,float right,float bottom,float rx,float ry,Paint paint)
+        画圆角矩形   (矩形坐标,圆角半径X,,圆角半径Y,paint)
+Canvas.drawArc(float left,flaot top,float right,float buttom,float startAngle,float sweepAngle,boolean suerCenter,Paint paint)
+        画扇形   (扇形所在矩形的坐标,开始角度,绘制的角度,是否连接圆心,paint)
+Canvas.drawPath(Path path ,Paint paint)
+        画Path   (path,paint)
+Canvas.drawBitmap(Bitmap bitmap ,float left,float top,Paint paint)
+        画Bitmap   (bitmap,绘制的坐标,paint)
+Canvas.drawText(String text,float x,float y,Paint paint)
+        画Text   (text,绘制的坐标,paint)
+
+
+Paint.setColor(@ColorInt int color)     //paint color
+Paint.setStyle(Paint.style style)     //style.FILL(填充)  style.STROKE(划线)
+Paint.setStrokeWidth(flaot width)     //画线的width
+Paint.setAntiAlias(Boolean aa)        //开关抗锯齿
+Paint.setStrokeCap(Paint.Cap cap)     //圆点和矩形点
+Paint.setTextSize(int textSize)         //textSize
+</code></pre>
     
 
     
@@ -433,21 +443,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/25/工具类/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/10/Hexo博客简单搭建/" id="post_nav-older" class="next-content">
+        <a href="/2017/07/13/Kotlin-01/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

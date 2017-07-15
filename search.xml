@@ -4,6 +4,61 @@
   
     
     <entry>
+      <title><![CDATA[自定义View -1]]></title>
+      <url>/2017/07/15/%E8%87%AA%E5%AE%9A%E4%B9%89View-1/</url>
+      <content type="html"><![CDATA[<h2 id="自定义View-之-绘制"><a href="#自定义View-之-绘制" class="headerlink" title="自定义View 之 绘制"></a>自定义View 之 绘制</h2><ul>
+<li>自定义View的绘制主要是重写绘制的方法 ,其中最长用的就是onDraw()方法</li>
+<li>绘制的关键是Canvas的使用<ul>
+<li>Canvas的绘制类方法 : drawXXX() 关键参数 Paint</li>
+<li>Canvas的辅助类方法 : Canvas的裁切和几何变换</li>
+<li>可以使用不同的绘制方法来控制遮盖关系</li>
+</ul>
+</li>
+</ul>
+<h2 id="自定义绘制知识的4个级别"><a href="#自定义绘制知识的4个级别" class="headerlink" title="自定义绘制知识的4个级别"></a>自定义绘制知识的4个级别</h2><p>1  Canvas的 drawXXX();</p>
+<p>2  Paint;</p>
+<p>3  Canvas的裁切和几何变换</p>
+<p>4  使用不同的绘制方法控制遮盖关系</p>
+<h2 id="Canvas的drawXXX-和-Paint的基本使用"><a href="#Canvas的drawXXX-和-Paint的基本使用" class="headerlink" title="Canvas的drawXXX()和 Paint的基本使用"></a>Canvas的drawXXX()和 Paint的基本使用</h2><pre><code>Canvas.drawColor(@ColorInt int color)
+        填充颜色          
+Canvas.drawRGB(int r,int g,int b)
+        填充颜色 
+Canvas.drawARGB(int a,int r,int g,int b)
+        填充颜色
+Canvas.drawCircle(float centerX,float centerY,float radius,Paint paint)
+        画圆   (圆心坐标,半径,paint)
+Canvas.drawRect(float left,float top,float right,float bottom,Paint paint)
+        画矩形   (矩形左上角坐标,矩形右下角坐标,paint)
+Canvas.drawPoint(float x,float y,Paint paint)
+        画点   (坐标,paint)
+Canvas.drawPoints(float[] pts,int offset,int count,Paint paint)
+        画多个点   (坐标数组,开始的组数,绘制的组数,paint)
+Canvas.drawOval(float left,float top,float right,float ,bottom,Paint paint)
+        画椭圆   (椭圆坐标,paint)
+Canvas.drawLine(float startX,float startY,float stopX, float stopY,Paint paint)
+        画线   (开始坐标,结束坐标,paint)
+Canvas.drawRoundRect(float left,float top,float right,float bottom,float rx,float ry,Paint paint)
+        画圆角矩形   (矩形坐标,圆角半径X,,圆角半径Y,paint)
+Canvas.drawArc(float left,flaot top,float right,float buttom,float startAngle,float sweepAngle,boolean suerCenter,Paint paint)
+        画扇形   (扇形所在矩形的坐标,开始角度,绘制的角度,是否连接圆心,paint)
+Canvas.drawPath(Path path ,Paint paint)
+        画Path   (path,paint)
+Canvas.drawBitmap(Bitmap bitmap ,float left,float top,Paint paint)
+        画Bitmap   (bitmap,绘制的坐标,paint)
+Canvas.drawText(String text,float x,float y,Paint paint)
+        画Text   (text,绘制的坐标,paint)
+
+
+Paint.setColor(@ColorInt int color)     //paint color
+Paint.setStyle(Paint.style style)     //style.FILL(填充)  style.STROKE(划线)
+Paint.setStrokeWidth(flaot width)     //画线的width
+Paint.setAntiAlias(Boolean aa)        //开关抗锯齿
+Paint.setStrokeCap(Paint.Cap cap)     //圆点和矩形点
+Paint.setTextSize(int textSize)         //textSize
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Kotlin-01]]></title>
       <url>/2017/07/13/Kotlin-01/</url>
       <content type="html"><![CDATA[<h1 id="Kotlin-01"><a href="#Kotlin-01" class="headerlink" title="Kotlin-01"></a>Kotlin-01</h1><h2 id="基本语法和Java的区别"><a href="#基本语法和Java的区别" class="headerlink" title="基本语法和Java的区别"></a>基本语法和Java的区别</h2><h4 id="字段声明"><a href="#字段声明" class="headerlink" title="字段声明"></a>字段声明</h4><pre><code>在java中
