@@ -4,6 +4,92 @@
   
     
     <entry>
+      <title><![CDATA[自定义View-2]]></title>
+      <url>/2017/07/18/%E8%87%AA%E5%AE%9A%E4%B9%89View-2/</url>
+      <content type="html"><![CDATA[<h2 id="自定义View-之-Paint"><a href="#自定义View-之-Paint" class="headerlink" title="自定义View 之 Paint"></a>自定义View 之 Paint</h2><h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><ul>
+<li>serColor() </li>
+<li>setRGB()</li>
+<li>setARGB()</li>
+<li><p>setShader()  在Android中并不直接使用Shader这个类,而是直接使用它的子类</p>
+<ul>
+<li>LinearGradient 线性渐变</li>
+<li>RadialGradient 辐射渐变</li>
+<li>SweepGradient  扫描渐变</li>
+<li>BitmapGradient 绘制Bitmap重的像素信息</li>
+<li>composeGradient 混合着色器</li>
+</ul>
+</li>
+<li><p>setColorFilter() 也是使用的ColorFilter的子类</p>
+<ul>
+<li>LigheingColorFilter  模拟简单的光照</li>
+<li>PorterDuffColorFilter 使用指定的一种颜色和指定的一种PorterDuff.Mode来和绘制的对象进行合成</li>
+<li>ColorMatrixColorFilter  内部使用的是一个4*5的矩阵对绘制的每一个像素进行转换</li>
+</ul>
+</li>
+<li><p>setXfermode() 设置绘制的内容的颜色处理方案 (PorterDuffXfermode)</p>
+<ul>
+<li>使用注意点<ul>
+<li>使用离屏缓冲</li>
+<li>使用离屏缓冲可以把绘制的内容单独的绘制缓冲层,Xfermode 就不会出现奇怪的情况</li>
+<li>View.setLayerType()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
+<li>setAntiAlias()</li>
+<li>setStyle()</li>
+<li><p>线条形状</p>
+<ul>
+<li>setStrokeWidth()  设置线条宽度</li>
+<li>setStrokeCap()    设置线头的形状</li>
+<li>setStrokeJoin()    设置拐角的形状</li>
+<li>setStrokeMiter()    设置Miter型拐角的延长线的最大值</li>
+</ul>
+</li>
+<li><p>色彩优化</p>
+<ul>
+<li>setDither()            是否开启抖动</li>
+<li>setFilterBitmap()        设置是否使用双线性过滤来绘制Bitmap</li>
+</ul>
+</li>
+<li><p>setPathEffect()        使用PathEffect给图形的轮廓设置效果</p>
+<ul>
+<li>单一效果<ul>
+<li>CornerPathEffect        把所有的拐角变成圆角</li>
+<li>DiscrerePathEffect     把线条进行随机的偏离</li>
+<li>DasHPathEffect        使用虚线绘制线条</li>
+<li>PathDashPathEffect    使用Path 绘制虚线</li>
+</ul>
+</li>
+<li>组合效果<ul>
+<li>sumPathEffect            两种效果分别对Path进行绘制</li>
+<li>compostPathEffect        先使用第一PathEffect绘制,然后在对改变后的Path使用另一个PathEffect绘制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>setShadowLater()    在绘制内容之下加一层阴影</p>
+</li>
+<li>setMaskFilter()    在绘制内容之上添加效果<ul>
+<li>MaskFilter<ul>
+<li>BlurMaskFilter    模糊效果</li>
+<li>EmbossMaskFilter    浮雕效果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
+<li>reset()            重置Paint的属性为默认值</li>
+<li>set(Paint src)    把src的所有属性都复制过来</li>
+<li>setFlags()        批量设置Flags<h3 id="drawText-相关"><a href="#drawText-相关" class="headerlink" title="drawText()相关"></a>drawText()相关</h3></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[自定义View -1]]></title>
       <url>/2017/07/15/%E8%87%AA%E5%AE%9A%E4%B9%89View-1/</url>
       <content type="html"><![CDATA[<h2 id="自定义View-之-绘制"><a href="#自定义View-之-绘制" class="headerlink" title="自定义View 之 绘制"></a>自定义View 之 绘制</h2><ul>

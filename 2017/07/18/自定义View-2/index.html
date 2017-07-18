@@ -10,7 +10,7 @@
     
     <title>
         
-            探究Activity | 
+            自定义View-2 | 
         
         lhy
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="探究Activity | lhy">
+    <meta property="og:title" content="自定义View-2 | lhy">
     <meta property="og:description" content="null">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#探究Activity"><span class="post-toc-number">1.</span> <span class="post-toc-text">探究Activity</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity的基本使用"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Activity的基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Intent的使用"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Intent的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的生命周期"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">Activity 的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的启动模式"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">Activity 的启动模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Activity-的最佳实践"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">Activity 的最佳实践</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义View-之-Paint"><span class="post-toc-number">1.</span> <span class="post-toc-text">自定义View 之 Paint</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#颜色"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">颜色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#效果"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#drawText-相关"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">drawText()相关</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -262,7 +262,7 @@
         
     
             <p class="article-headline-p">
-                探究Activity
+                自定义View-2
             </p>
         </div>
 
@@ -281,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>lhy</strong>
-        <span>3月 02, 2017</span>
+        <span>7月 18, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -305,7 +305,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/第一行代码/">第一行代码</a>
+        <a class="post_tag-link" href="/tags/自定义view/">自定义view</a>
     </ul>
     
 
@@ -321,7 +321,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=探究Activity&url=//2017/03/02/探究Activity/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自定义View-2&url=//2017/07/18/自定义View-2/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -333,7 +333,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/07/18/自定义View-2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -342,7 +342,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/07/18/自定义View-2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -354,7 +354,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=探究Activity&summary=null&pics=/img/favicon.png&url=/2017/03/02/探究Activity/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=自定义View-2&summary=null&pics=/img/favicon.png&url=/2017/07/18/自定义View-2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -372,121 +372,85 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="探究Activity"><a href="#探究Activity" class="headerlink" title="探究Activity"></a>探究Activity</h2><h4 id="Activity的基本使用"><a href="#Activity的基本使用" class="headerlink" title="Activity的基本使用"></a>Activity的基本使用</h4><ul>
-<li>1.手动创建Activity<ul>
-<li>自定义class继承 appCompatActivity或是其他Activity类</li>
-<li>通过setContentView(“布局”)为Activity添加布局文件</li>
-<li>在AndroidManifest.xml 注册改 Activity</li>
+        <h2 id="自定义View-之-Paint"><a href="#自定义View-之-Paint" class="headerlink" title="自定义View 之 Paint"></a>自定义View 之 Paint</h2><h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><ul>
+<li>serColor() </li>
+<li>setRGB()</li>
+<li>setARGB()</li>
+<li><p>setShader()  在Android中并不直接使用Shader这个类,而是直接使用它的子类</p>
+<ul>
+<li>LinearGradient 线性渐变</li>
+<li>RadialGradient 辐射渐变</li>
+<li>SweepGradient  扫描渐变</li>
+<li>BitmapGradient 绘制Bitmap重的像素信息</li>
+<li>composeGradient 混合着色器</li>
 </ul>
 </li>
-<li>2.在Activity中使用Toast<ul>
-<li>Toast.makeText(“上下文,Context的子类”,”显示的字符串”,Toast.LENGTH_SHORT).show();     </li>
+<li><p>setColorFilter() 也是使用的ColorFilter的子类</p>
+<ul>
+<li>LigheingColorFilter  模拟简单的光照</li>
+<li>PorterDuffColorFilter 使用指定的一种颜色和指定的一种PorterDuff.Mode来和绘制的对象进行合成</li>
+<li>ColorMatrixColorFilter  内部使用的是一个4*5的矩阵对绘制的每一个像素进行转换</li>
 </ul>
 </li>
-<li>3.在Activity中使用Menu<ul>
-<li>创建item菜单</li>
-<li>在Activity中重写onCreateOptionsMenu(Menu menu),加载资源文件到menu上,当返回值为true 的时候 menu 才会显示 </li>
-</ul>
-</li>
-<li>4.销毁Activity<ul>
-<li>Activity中调用 finish() 销毁当前的Activity </li>
-</ul>
-</li>
-</ul>
-<h4 id="Intent的使用"><a href="#Intent的使用" class="headerlink" title="Intent的使用"></a>Intent的使用</h4><ul>
-<li>显式Intent<ul>
-<li>显式Intent ,顾名思义 是指确切的知道将要打开的Activity,</li>
-<li>使用方式,new Intent(Context, NextActivity.class);  </li>
-</ul>
-</li>
-<li>隐式Intent<ul>
-<li>隐式Intent ,是指在没有确定知道要跳转的Activity,使用了一系列的action,category,由系统去分析这个Intent,找到合适的Activity并启动</li>
-<li>在activtiy指定了action 或是categroy 时,启动Activity的Intent必须都与该Activity参数都一一对应时候才会启动该Activity</li>
-<li>category 的默认参数一般不用写,也可以启动</li>
-<li>比如启动系统浏览器打开百度<ul>
-<li>Intent  intent=new Intent(Intent.ACTION.VIEW);</li>
-<li>intetn.setData(Uri.parse(“<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>“))</li>
-<li>staetActivity(intent);</li>
-</ul>
-</li>
-<li>比如启动打电话<ul>
-<li>Intent intent=new Intent(Intent.ACTION.DLAL);</li>
-<li>intent.setData(Uri.parse(“tel:10086”));</li>
-<li>startActivity(intent);   </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>向下一个Activity传递参数<ul>
-<li>传递参数可使用intent.putExtra(“KEY”,”value”)</li>
-<li>该方法重载,可以传递多种数据类型</li>
-<li>可以使用传递Bundle对象</li>
-<li>要想传递其他的对象类型的参数的时候,该类必须实现Serializable 或者 Parcelable</li>
-<li>在启动的Activity 中通过 getIntent() 获取Intent对象<ul>
-<li>在通过intent对象,获取传递过来的参数,比如传递额String类型的参数,就通过intent.getStringExtra(“KEY”)</li>
-<li>传递的整数,就通过intent.getIntExtra(“KEY”); </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>返回数据给上一个Activity<ul>
-<li>在返回给上一个Activity参数中用到的是一个requesCode 和一个 resultCode</li>
-<li>requestCode用于标记是从哪个Activiyt启动的</li>
-<li>resultCode用于标记是从哪个Activity返回的</li>
-<li>在需要返回个上一个Activty数据这种情况的时候,启动Activity的方式就不是原来的startActivity(intent)了</li>
-<li>具体使用<ul>
-<li>ActivityOne    startActivitForResutl(intent,requestCode)   requestCode   随意指定,但一定要唯一</li>
-<li>ActivityTwo   setResult( resultCode ,intent);    finish;  resultCode    随意指定,但一定要唯一</li>
-<li>当ActivityTwo 销毁的时候就会调用ActivityOne 中的onActivityResult(int requestCode,int resultCode,Intent data)</li>
-<li>在判断requestCode 和 resultCode 都准确无误的情况下,就可以使用date.getStringExtra(“KEY”),获取返回的数据</li>
+<li><p>setXfermode() 设置绘制的内容的颜色处理方案 (PorterDuffXfermode)</p>
+<ul>
+<li>使用注意点<ul>
+<li>使用离屏缓冲</li>
+<li>使用离屏缓冲可以把绘制的内容单独的绘制缓冲层,Xfermode 就不会出现奇怪的情况</li>
+<li>View.setLayerType()</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="Activity-的生命周期"><a href="#Activity-的生命周期" class="headerlink" title="Activity 的生命周期"></a>Activity 的生命周期</h4><ul>
-<li>完整的生命周期<ul>
-<li>onCreate() &gt; onStart() &gt; onResume &gt; onPause() &gt; onStop() &gt; onDestroy()</li>
-<li>onRestatrt();</li>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
+<li>setAntiAlias()</li>
+<li>setStyle()</li>
+<li><p>线条形状</p>
+<ul>
+<li>setStrokeWidth()  设置线条宽度</li>
+<li>setStrokeCap()    设置线头的形状</li>
+<li>setStrokeJoin()    设置拐角的形状</li>
+<li>setStrokeMiter()    设置Miter型拐角的延长线的最大值</li>
 </ul>
 </li>
-<li>不同状态下的方法回调<ul>
-<li>启动ActivityOne   onCreate() &gt; onStart() &gt; onResume();</li>
-<li>在ActivityOne 中启动 ActivityTwo   ActivityOne 中会调用 onPause()  &gt; onStop() </li>
-<li>从ActivityTwo 中返回 ActivityOne  ActivityOne中会调用onRestart() &gt; onStart() &gt; onResume();</li>
-<li>在ActivtiyOne中按下返回键时 ActivityOne 中会调用onPause() &gt; onStop() &gt; onDestroy();</li>
-<li>如果在新打开的Activity没有完全的遮挡住下面的Activity的时候, 下面的Activity只会回调 onPause(),还是属于可见的状态,再次返回的时候也只是会回调onResume()</li>
+<li><p>色彩优化</p>
+<ul>
+<li>setDither()            是否开启抖动</li>
+<li>setFilterBitmap()        设置是否使用双线性过滤来绘制Bitmap</li>
 </ul>
 </li>
-<li>Activity的被销毁时的数据存储<ul>
-<li>当手机的内存不足的情况下,会销毁处于停止状态的Activity.为了优化用户体验, 所以这时数据的保存就显得尤为重要.</li>
-<li>在Activity销毁的时候必然会调用onSaveInstaceState(Bundle outState),可以通过bundle 以键值对的形式传递参数,</li>
-<li>当Activity再次重新创建的时候调用的onCreate(Bundle onSaveInstaceState) 取出Bundle所携带的参数</li>
-<li>因为第一次创建Activity的时候没有返回的参数,所以要在这里判断Bundle是否为null之后在进行下一步操作</li>
+<li><p>setPathEffect()        使用PathEffect给图形的轮廓设置效果</p>
+<ul>
+<li>单一效果<ul>
+<li>CornerPathEffect        把所有的拐角变成圆角</li>
+<li>DiscrerePathEffect     把线条进行随机的偏离</li>
+<li>DasHPathEffect        使用虚线绘制线条</li>
+<li>PathDashPathEffect    使用Path 绘制虚线</li>
+</ul>
+</li>
+<li>组合效果<ul>
+<li>sumPathEffect            两种效果分别对Path进行绘制</li>
+<li>compostPathEffect        先使用第一PathEffect绘制,然后在对改变后的Path使用另一个PathEffect绘制</li>
 </ul>
 </li>
 </ul>
-<h4 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h4><ul>
-<li>standard  每一Activity 默认的启动模式,是以先进后出的结构进行,每次打开一个新的Activity都会重新创建</li>
-<li>singleTop  单栈顶模式,在启动一个Activity时候判断是否在栈顶,如果不再栈顶,就会重新创建一个新的Activity实例,如果在栈顶,就会复用该栈顶的Activity 实例.</li>
-<li>singleTask 单任务栈模式, 再打开一个新的Activity的时候会判断该Activity是否在该任务栈存在,如果存在,就选择复用,不存在就会新创建一个Activity的实例</li>
-<li>singleInstance 单独的返回栈管理一个Activity </li>
-</ul>
-<h4 id="Activity-的最佳实践"><a href="#Activity-的最佳实践" class="headerlink" title="Activity 的最佳实践"></a>Activity 的最佳实践</h4><ul>
-<li>知晓当前在那个Activity<ul>
-<li>创建BaseActivity 在onCreate()中调用getClass().getSimpleName(), 让所有的Activity都继承BaseActivity</li>
+</li>
+<li><p>setShadowLater()    在绘制内容之下加一层阴影</p>
+</li>
+<li>setMaskFilter()    在绘制内容之上添加效果<ul>
+<li>MaskFilter<ul>
+<li>BlurMaskFilter    模糊效果</li>
+<li>EmbossMaskFilter    浮雕效果</li>
 </ul>
 </li>
-<li>安全的退出Activity<ul>
-<li>创建ActivtiController . 添加addActivity(Activity activity) 并在BaseActivity 的onCreate() 中调用</li>
-<li>添加removeActivity(Activity activity) 在BaseActivity的onDestroy()中调用</li>
-<li>创建finishAllActivity() 在需要关闭所有Activity的地方调用即可</li>
 </ul>
 </li>
-<li>启动Activity的最佳写法<ul>
-<li>将打开Activity所需要用到的参数,以方法的形式封装,只把需要用到的参数对外暴露,简单,明了</li>
 </ul>
-</li>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
+<li>reset()            重置Paint的属性为默认值</li>
+<li>set(Paint src)    把src的所有属性都复制过来</li>
+<li>setFlags()        批量设置Flags<h3 id="drawText-相关"><a href="#drawText-相关" class="headerlink" title="drawText()相关"></a>drawText()相关</h3></li>
 </ul>
 
     
@@ -510,21 +474,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/03/Android中引入百分比布局/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/01/Android menu 使用/" id="post_nav-older" class="next-content">
+        <a href="/2017/07/15/自定义View-1/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
