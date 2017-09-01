@@ -4,6 +4,49 @@
   
     
     <entry>
+      <title><![CDATA[lambda表达式]]></title>
+      <url>/2017/09/01/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="lambda表达式的基本语法"><a href="#lambda表达式的基本语法" class="headerlink" title="lambda表达式的基本语法"></a>lambda表达式的基本语法</h2><p><strong><br> 参数列表 -&gt; 表达式
+</strong></p>
+<h2 id="参数列表"><a href="#参数列表" class="headerlink" title="参数列表"></a>参数列表</h2><ul>
+<li>如果没有参数,直接使用()表示,() 不能省略</li>
+<li>如果只有一个参数,并且写了参数类型,参数外面一定要加()</li>
+<li>如果只有一个参数,并且参数不写类型,那么参数外面可以不用加()</li>
+<li>如果有两个或多个参数,不管是否写参数类型,都要加上()</li>
+<li>如果参数要加修饰符,或者标签,参数一定要加上完整的参数类型</li>
+</ul>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ul>
+<li>如果表达式只有一行可以直接写,不需要写{}</li>
+<li>如果表达式有多行,需要用{}变成代码块</li>
+<li>如果表达式是代码块,并且需要返回值,那么在代码块中就必须有一个返回值</li>
+<li>如果只有单行的情况,并且方法需要返回值,就不能有return,编译器就会自动帮我们推导出来</li>
+</ul>
+<h2 id="lambda表达式中的变量"><a href="#lambda表达式中的变量" class="headerlink" title="lambda表达式中的变量"></a>lambda表达式中的变量</h2><ul>
+<li>参数</li>
+<li>局部变量</li>
+<li>自由变量 (不是参数也不是局部变量)</li>
+<li>lambda 表达式中的自由变量会被保存,无论什么时候执行lambda,都可以直接使用,但是不可以修改变量的值</li>
+<li>操作自由变量的代码块称作为(闭包)</li>
+<li>lambda 表达式中的this指向,  产生 lambad表达式的方法中的this</li>
+</ul>
+<h2 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口:"></a>函数式接口:</h2><ul>
+<li>我们能够写lambda表达式的地方,一个接口,且接口中只有一个抽象方法</li>
+<li>在Java中,把只有一个抽象方法的接称为函数式接口,如果一个接口是函数式接口,我们可以再接口上添加@FunctionalInterface标签说明这是一个函数式接口 (作用 1: 检查,2:文档)</li>
+<li>无论 是否加@FunctionalInterface ,只要满足函数式接口的接口,Java都会直接识别为函数式接口</li>
+<li>简化函数式接口的使用是Java中提供的Lambda表达式唯一的作用</li>
+<li>可以用接口来直接引用一个lambda表达式</li>
+<li>函数式接口中可以编写Object对象中的方法</li>
+<li>lambda表达式中的异常处理:<br>1:直接在代码中try catch<br>2:接口的方法声明中抛出异常</li>
+</ul>
+<h2 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h2><ul>
+<li>类:: 静态方法</li>
+<li>对象:: 方法</li>
+<li>对象:: 静态方法</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[RxJava - 01]]></title>
       <url>/2017/07/20/RxJava-01/</url>
       <content type="html"><![CDATA[<h2 id="RxJava-01"><a href="#RxJava-01" class="headerlink" title="RxJava -01"></a>RxJava -01</h2>]]></content>

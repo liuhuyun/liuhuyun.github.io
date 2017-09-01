@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: blog | 
+            lambda表达式 | 
         
         lhy
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: blog | lhy">
+    <meta property="og:title" content="lambda表达式 | lhy">
     <meta property="og:description" content="null">
 
     <!--[if lte IE 9]>
@@ -200,87 +200,256 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#lambda表达式的基本语法"><span class="post-toc-number">1.</span> <span class="post-toc-text">lambda表达式的基本语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参数列表"><span class="post-toc-number">2.</span> <span class="post-toc-text">参数列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#表达式"><span class="post-toc-number">3.</span> <span class="post-toc-text">表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#lambda表达式中的变量"><span class="post-toc-number">4.</span> <span class="post-toc-text">lambda表达式中的变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数式接口"><span class="post-toc-number">5.</span> <span class="post-toc-text">函数式接口:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法引用"><span class="post-toc-number">6.</span> <span class="post-toc-text">方法引用</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/10/Hexo博客简单搭建/">Hexo博客简单搭建</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/10/Hexo博客简单搭建/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="lhy's avatar">
-            </div>
-            <div>
-                <strong>lhy</strong>
-                <span>2月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                lambda表达式
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>lhy</strong>
+        <span>9月 01, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/lambda/">lambda</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=lambda表达式&url=//2017/09/01/lambda表达式/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/09/01/lambda表达式/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/09/01/lambda表达式/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=lambda表达式&summary=null&pics=/img/favicon.png&url=/2017/09/01/lambda表达式/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="lambda表达式的基本语法"><a href="#lambda表达式的基本语法" class="headerlink" title="lambda表达式的基本语法"></a>lambda表达式的基本语法</h2><p><strong><br> 参数列表 -&gt; 表达式
+</strong></p>
+<h2 id="参数列表"><a href="#参数列表" class="headerlink" title="参数列表"></a>参数列表</h2><ul>
+<li>如果没有参数,直接使用()表示,() 不能省略</li>
+<li>如果只有一个参数,并且写了参数类型,参数外面一定要加()</li>
+<li>如果只有一个参数,并且参数不写类型,那么参数外面可以不用加()</li>
+<li>如果有两个或多个参数,不管是否写参数类型,都要加上()</li>
+<li>如果参数要加修饰符,或者标签,参数一定要加上完整的参数类型</li>
+</ul>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ul>
+<li>如果表达式只有一行可以直接写,不需要写{}</li>
+<li>如果表达式有多行,需要用{}变成代码块</li>
+<li>如果表达式是代码块,并且需要返回值,那么在代码块中就必须有一个返回值</li>
+<li>如果只有单行的情况,并且方法需要返回值,就不能有return,编译器就会自动帮我们推导出来</li>
+</ul>
+<h2 id="lambda表达式中的变量"><a href="#lambda表达式中的变量" class="headerlink" title="lambda表达式中的变量"></a>lambda表达式中的变量</h2><ul>
+<li>参数</li>
+<li>局部变量</li>
+<li>自由变量 (不是参数也不是局部变量)</li>
+<li>lambda 表达式中的自由变量会被保存,无论什么时候执行lambda,都可以直接使用,但是不可以修改变量的值</li>
+<li>操作自由变量的代码块称作为(闭包)</li>
+<li>lambda 表达式中的this指向,  产生 lambad表达式的方法中的this</li>
+</ul>
+<h2 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口:"></a>函数式接口:</h2><ul>
+<li>我们能够写lambda表达式的地方,一个接口,且接口中只有一个抽象方法</li>
+<li>在Java中,把只有一个抽象方法的接称为函数式接口,如果一个接口是函数式接口,我们可以再接口上添加@FunctionalInterface标签说明这是一个函数式接口 (作用 1: 检查,2:文档)</li>
+<li>无论 是否加@FunctionalInterface ,只要满足函数式接口的接口,Java都会直接识别为函数式接口</li>
+<li>简化函数式接口的使用是Java中提供的Lambda表达式唯一的作用</li>
+<li>可以用接口来直接引用一个lambda表达式</li>
+<li>函数式接口中可以编写Object对象中的方法</li>
+<li>lambda表达式中的异常处理:<br>1:直接在代码中try catch<br>2:接口的方法声明中抛出异常</li>
+</ul>
+<h2 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h2><ul>
+<li>类:: 静态方法</li>
+<li>对象:: 方法</li>
+<li>对象:: 静态方法</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/07/20/RxJava-01/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -443,6 +612,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
