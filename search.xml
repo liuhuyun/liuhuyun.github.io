@@ -6,7 +6,54 @@
     <entry>
       <title><![CDATA[自定义View_3_文字的绘制]]></title>
       <url>/2017/09/11/%E8%87%AA%E5%AE%9A%E4%B9%89View_3_%E6%96%87%E5%AD%97%E7%9A%84%E7%BB%98%E5%88%B6/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h2 id="绘制文字的方式"><a href="#绘制文字的方式" class="headerlink" title="绘制文字的方式"></a>绘制文字的方式</h2><ul>
+<li>drawText()</li>
+<li>drawTextRun()</li>
+<li>drawTextOnPath()</li>
+<li><p>StaticLayout  绘制多行文本,支持自动换行</p>
+<p>  使用的是</p>
+<pre><code>String text1 = &quot;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&quot;;  
+StaticLayout staticLayout1 = new StaticLayout(text1, paint, 600,  
+Layout.Alignment.ALIGN_NORMAL, 1, 0, true);
+String text2 = &quot;a\nbc\ndefghi\njklm\nnopqrst\nuvwx\nyz&quot;;  
+StaticLayout staticLayout2 = new StaticLayout(text2, paint, 600,  
+Layout.Alignment.ALIGN_NORMAL, 1, 0, true);
+canvas.save();  
+canvas.translate(50, 100);  
+staticLayout1.draw(canvas);  
+canvas.translate(0, 200);  
+staticLayout2.draw(canvas);  
+canvas.restore();  
+</code></pre></li>
+</ul>
+<h2 id="Paint对文字绘制的辅助"><a href="#Paint对文字绘制的辅助" class="headerlink" title="Paint对文字绘制的辅助"></a>Paint对文字绘制的辅助</h2><h4 id="设置显示效果类"><a href="#设置显示效果类" class="headerlink" title="设置显示效果类"></a>设置显示效果类</h4><ul>
+<li>setTextSize() 设置文字大小</li>
+<li>setTypeface() 设置字体</li>
+<li>setFakeBoldText() 是否使用伪粗体</li>
+<li>setStrikeThruText() 是否添加删除线</li>
+<li>setUnderlineText()  是否添加下划线</li>
+<li>setTextSkewX()  设置文字的倾斜角度</li>
+<li>setTextScaleX() 设置文字的宽度</li>
+<li>setLetterSpacing()  设置字符间距,默认值为0</li>
+<li>setTextAlign()  设置文字的对齐方式</li>
+</ul>
+<h4 id="测量文字尺寸类"><a href="#测量文字尺寸类" class="headerlink" title="测量文字尺寸类"></a>测量文字尺寸类</h4><ul>
+<li>float getFontSpacing()  获取推荐的行距</li>
+<li><p>FontMetircs getFontMetircs() 获取测量对象,提供了几个文字排版方面的数值</p>
+<pre><code>ascent
+  ascent的值是负值,因为在baseline的上方
+descent
+  descent的值是正值,因为在baseline的下方
+top
+bottom
+leading
+</code></pre></li>
+<li><p>getTextBounds(String text,int start,int end,Rect bounds) 获取文字的显示范围</p>
+</li>
+<li>measureText(String text) 测量文字的宽度</li>
+<li>getTextWidths(String text,float[] widths) 获取字符串的每个字符的宽度,并返回widths</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
