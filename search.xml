@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title><![CDATA[自定义View_4_Canvas对绘制的辅助]]></title>
+      <url>/2017/09/12/%E8%87%AA%E5%AE%9A%E4%B9%89View_4_Canvas%E5%AF%B9%E7%BB%98%E5%88%B6%E7%9A%84%E8%BE%85%E5%8A%A9/</url>
+      <content type="html"><![CDATA[<h2 id="范围裁切"><a href="#范围裁切" class="headerlink" title="范围裁切"></a>范围裁切</h2><ul>
+<li>canvas.clipRect()</li>
+<li>canvas.clipPath()</li>
+</ul>
+<h2 id="几何变换"><a href="#几何变换" class="headerlink" title="几何变换"></a>几何变换</h2><h4 id="使用Canvas-做常见的二维变换"><a href="#使用Canvas-做常见的二维变换" class="headerlink" title="使用Canvas 做常见的二维变换"></a>使用Canvas 做常见的二维变换</h4><ul>
+<li>canvas.translate(float dx,float dy) 平移</li>
+<li>canvas.rotate(float degrees,float px,float py) 旋转</li>
+<li>canvas.scale(float sx,float sy,float px, flaot py) 缩放</li>
+<li>canvas.skew(float sx,float sy) 错切</li>
+</ul>
+<h4 id="使用Matrix-做常见和不常见的二维变换"><a href="#使用Matrix-做常见和不常见的二维变换" class="headerlink" title="使用Matrix 做常见和不常见的二维变换"></a>使用Matrix 做常见和不常见的二维变换</h4><ul>
+<li>创建Matrix 对象</li>
+<li>调用Matrix的pre/post(Translate/Rotate/Scale/Skew)</li>
+<li>使用Canvas.setMatrix(matrix) 或Canvas.concat(matrix) 把几何变换引用到Canvas</li>
+<li>matrix.setPolyToPoly()    自定义变换</li>
+</ul>
+<h4 id="使用Camera-做三维的变换"><a href="#使用Camera-做三维的变换" class="headerlink" title="使用Camera 做三维的变换"></a>使用Camera 做三维的变换</h4><ul>
+<li>创建Camera对象</li>
+<li>Camera.save() 保存状态</li>
+<li>rotate*() 三维旋转</li>
+<li>translate(float x,float y,float z) 移动</li>
+<li>setLocation(x,y,z) 设置虚拟相机的位置</li>
+<li>Camera.restore() 恢复装态</li>
+<li>applyToCanvas(canvas) 把变换投影到Canvas</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[自定义View_3_文字的绘制]]></title>
       <url>/2017/09/11/%E8%87%AA%E5%AE%9A%E4%B9%89View_3_%E6%96%87%E5%AD%97%E7%9A%84%E7%BB%98%E5%88%B6/</url>
       <content type="html"><![CDATA[<h2 id="绘制文字的方式"><a href="#绘制文字的方式" class="headerlink" title="绘制文字的方式"></a>绘制文字的方式</h2><ul>
