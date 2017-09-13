@@ -4,6 +4,40 @@
   
     
     <entry>
+      <title><![CDATA[自定义View_5_绘制顺序]]></title>
+      <url>/2017/09/13/%E8%87%AA%E5%AE%9A%E4%B9%89View_5_%E7%BB%98%E5%88%B6%E9%A1%BA%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<h2 id="绘制流程简述"><a href="#绘制流程简述" class="headerlink" title="绘制流程简述"></a>绘制流程简述</h2><pre><code>1.背景
+2.主体
+3.子View
+4.滑动边缘渐变和滑动条
+5.前景
+
+一般来说一个View 或 ViewGroup的绘制不会都包含这几项,但是必然逃不出这几项
+</code></pre><h2 id="onDraw"><a href="#onDraw" class="headerlink" title="onDraw()"></a>onDraw()</h2><pre><code>写在super.onDraw() 下面
+绘制的内容会覆盖之前控件的内容
+写在super.onDraw() 上面
+绘制的内容会被控件自身的内容覆盖,但是可以绘制纯色背景使用
+</code></pre><h2 id="dispatchDraw-绘制子View的方法"><a href="#dispatchDraw-绘制子View的方法" class="headerlink" title="dispatchDraw() (绘制子View的方法)"></a>dispatchDraw() (绘制子View的方法)</h2><ul>
+<li>在ViewGroup中如果使用onDraw()绘制的内容,在添加子View之后会覆盖之前的内容,在这里就得使用dispatchDraw()</li>
+</ul>
+<pre><code>写在super.dispatchDraw() 下面
+覆盖在子View之上
+写在super.dispatchDraw() 上面
+子View覆盖原有内容
+</code></pre><h2 id="onDrawForeground"><a href="#onDrawForeground" class="headerlink" title="onDrawForeground()"></a>onDrawForeground()</h2><pre><code>写在super.onDrawForeground() 下面
+绘制的内容会盖住前景,滑动边缘渐变,滑动条
+写在super.onDrawForeground() 上面
+前景,滑动边缘渐变,滑动条会盖住绘制的内容
+</code></pre><h2 id="draw"><a href="#draw" class="headerlink" title="draw()"></a>draw()</h2><pre><code>draw() 是一个绘制过程的总调度方法.
+
+写在super.draw(), 上面
+之后的内容会把之前的内容覆盖
+写在super.draw(), 下面
+绘制的内容会把之前的内容覆盖
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[自定义View_4_Canvas对绘制的辅助]]></title>
       <url>/2017/09/12/%E8%87%AA%E5%AE%9A%E4%B9%89View_4_Canvas%E5%AF%B9%E7%BB%98%E5%88%B6%E7%9A%84%E8%BE%85%E5%8A%A9/</url>
       <content type="html"><![CDATA[<h2 id="范围裁切"><a href="#范围裁切" class="headerlink" title="范围裁切"></a>范围裁切</h2><ul>
