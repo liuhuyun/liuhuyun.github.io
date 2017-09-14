@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 自定义View | 
+            自定义View_6_属性动画_1 | 
         
         lhy
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 自定义View | lhy">
+    <meta property="og:title" content="自定义View_6_属性动画_1 | lhy">
     <meta property="og:description" content="null">
 
     <!--[if lte IE 9]>
@@ -200,87 +200,317 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ViewPropertyAnimator"><span class="post-toc-number">1.</span> <span class="post-toc-text">ViewPropertyAnimator</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ObjcetAnimator"><span class="post-toc-number">2.</span> <span class="post-toc-text">ObjcetAnimator</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通用功能"><span class="post-toc-number">3.</span> <span class="post-toc-text">通用功能</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/11/自定义View_3_文字的绘制/">自定义View_3_文字的绘制</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            绘制...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/11/自定义View_3_文字的绘制/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="lhy's avatar">
-            </div>
-            <div>
-                <strong>lhy</strong>
-                <span>9月 11, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                自定义View_6_属性动画_1
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>lhy</strong>
+        <span>9月 14, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自定义View_6_属性动画_1&url=//2017/09/14/自定义View_6_属性动画_1/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=//2017/09/14/自定义View_6_属性动画_1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=//2017/09/14/自定义View_6_属性动画_1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=lhy&title=自定义View_6_属性动画_1&summary=null&pics=/img/favicon.png&url=/2017/09/14/自定义View_6_属性动画_1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="ViewPropertyAnimator"><a href="#ViewPropertyAnimator" class="headerlink" title="ViewPropertyAnimator"></a>ViewPropertyAnimator</h2><ul>
+<li>常用方法</li>
+<li>其中xxBy()方法是带增量的方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">view中的方法</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">对应ViewPropertyAnimator中的方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">setTranslationX()</td>
+<td style="text-align:center">设置X轴偏移</td>
+<td style="text-align:center">translationX(),translationXBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setTranslationY()</td>
+<td style="text-align:center">设置Y轴偏移</td>
+<td style="text-align:center">translationY(),translationYBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setTranslationY()</td>
+<td style="text-align:center">设置Z轴偏移</td>
+<td style="text-align:center">translationZ(),translationZBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setX()</td>
+<td style="text-align:center">设置x轴的绝对位置</td>
+<td style="text-align:center">x(),xBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setY()</td>
+<td style="text-align:center">设置Y轴的绝对位置</td>
+<td style="text-align:center">y(),yBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setZ()</td>
+<td style="text-align:center">设置Z轴的绝对位置</td>
+<td style="text-align:center">z(),zBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setRotaion()</td>
+<td style="text-align:center">设置平面旋转</td>
+<td style="text-align:center">rotation(),rotationBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setRotaionX()</td>
+<td style="text-align:center">设置沿X轴旋转</td>
+<td style="text-align:center">rotationX(),rotationXBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setRotaionY()</td>
+<td style="text-align:center">设置沿Y轴旋转</td>
+<td style="text-align:center">rotationY(),rotationYBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setScaleX()</td>
+<td style="text-align:center">设置横向缩放</td>
+<td style="text-align:center">scaleX(),scaleXBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setScaleY()</td>
+<td style="text-align:center">设置纵向缩放</td>
+<td style="text-align:center">scaleY(),scaleYBy()</td>
+</tr>
+<tr>
+<td style="text-align:center">setAlpha()</td>
+<td style="text-align:center">设置透明度</td>
+<td style="text-align:center">alpha(),alphaBy()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ObjcetAnimator"><a href="#ObjcetAnimator" class="headerlink" title="ObjcetAnimator"></a>ObjcetAnimator</h2><ul>
+<li>使用方法<ul>
+<li>如果是自定义控件,需要添加setter/getter方法</li>
+<li>使用ObjectAnimator,ofXXX()创建ObjectAnimator对象</li>
+<li>调用start方法执行动画</li>
+</ul>
+</li>
+</ul>
+<h2 id="通用功能"><a href="#通用功能" class="headerlink" title="通用功能"></a>通用功能</h2><ul>
+<li><p>setDuration(int duration) 设置动画时长,单位毫秒</p>
+</li>
+<li><p>设置监听器</p>
+<ul>
+<li>ViewPropertyanimator.setListenrer()/ObjObjectAnimator.addListener()</li>
+<li>ViewPropertyanimator.setUpdataListener()/ObObjectAnimator.addUpdateListener()</li>
+<li>ViewPropertyanimator.withStartAction()/endAction()</li>
+<li>ObjectAnimator.AddPauseListener()</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>setInterpolator(Interpolator interpolator) 设置动画的差值器</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/13/自定义View_5_绘制顺序/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -445,6 +675,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -515,82 +753,6 @@ It will not impact the appearance and can give developers a lot of support :)
         It will not impact the appearance and can give developers a lot of support :)
 
         很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import File -->
-<script src="/js/highlight.min.js"></script>
-<script src="/js/js.min.js"></script>
-<script src="/js/nprogress.js"></script>
-
-<script type="text/javascript">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-
-    $('#nprogress .bar').css({
-        'background': '#FF4081'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#FF4081',
-        'border-left-color': '#FF4081'
-    });
-
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Swiftye -->
-
-
-<!-- Local Search-->
-
-
-<!-- Window Load-->
-<script>
-    $(window).load(function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-</script>
-
-<!-- MathJax Load-->
-
-
-                </main>
-            </div>
-        </body>
-    
-</html>
-。
         它不会影响美观并可以给开发者很大的支持。 :)
         -->
 
