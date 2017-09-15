@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title><![CDATA[自定义View_7_属性动画_2]]></title>
+      <url>/2017/09/15/%E8%87%AA%E5%AE%9A%E4%B9%89View_7_%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB_2/</url>
+      <content type="html"><![CDATA[<h2 id="TypeEvaluator"><a href="#TypeEvaluator" class="headerlink" title="TypeEvaluator"></a>TypeEvaluator</h2><h2 id="ArgbEvaluator"><a href="#ArgbEvaluator" class="headerlink" title="ArgbEvaluator"></a>ArgbEvaluator</h2><h2 id="自定义Evaluator"><a href="#自定义Evaluator" class="headerlink" title="自定义Evaluator"></a>自定义Evaluator</h2><h2 id="PropertyValuesHolder"><a href="#PropertyValuesHolder" class="headerlink" title="PropertyValuesHolder"></a>PropertyValuesHolder</h2><p>PropertyValuesHolder是用来在同一个动画中对不同的属性进行操作.</p>
+<pre><code>PropertyValuesHolder holder1 = PropertyValuesHolder.ofFloat(&quot;scaleX&quot;, 1);  
+PropertyValuesHolder holder2 = PropertyValuesHolder.ofFloat(&quot;scaleY&quot;, 1);  
+PropertyValuesHolder holder3 = PropertyValuesHolder.ofFloat(&quot;alpha&quot;, 1);
+
+ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(view, holder1, holder2, holder3)  
+animator.start();  
+</code></pre><h2 id="AnimatorSet"><a href="#AnimatorSet" class="headerlink" title="AnimatorSet"></a>AnimatorSet</h2><p> 有了AnimatorSet就可以对多个Animator进行统一的规划和管理,让他们按照你想要的顺序工作</p>
+<ul>
+<li>创建AnimatorSet 对象</li>
+<li>AnimatorSet animatorSet = new AnimatorSet();</li>
+<li>创建animator</li>
+<li>ObjectAnimator animator1 = ObjectAnimator.ofFloat(view, “alpha”, 0, 1);</li>
+<li>ObjectAnimator animator2 = ObjectAnimator.ofFloat(view, “translationX”, -200, 200);</li>
+<li><p>ObjectAnimator animator3 = ObjectAnimator.ofFloat(view, “rotation”, 0, 1080);</p>
+<pre><code>     animatorSet.play (animator1).with (animator2);  // 一起执行
+  animatorSet.play (animator1).before (animator2);//先执行后面再执行前面
+animatorSet.play (animator1).after (animator2); //先执行前面在执行后面
+animatorSet.playTogether(animator2, animator3); // 2 和 3 同时开始
+animatorSet.playSequentially (animator2, animator3); // 2 和 3 依次开始  
+</code></pre></li>
+</ul>
+<h2 id="PropertyValusHolder-ofKeyFrame"><a href="#PropertyValusHolder-ofKeyFrame" class="headerlink" title="PropertyValusHolder.ofKeyFrame()"></a>PropertyValusHolder.ofKeyFrame()</h2><ul>
+<li>创建keyframe对象</li>
+<li>Keyframe keyframe1 = Keyframe.ofFloat(0, 0);(时间完成度,动画完成度)  </li>
+<li>Keyframe keyframe2 = Keyframe.ofFloat(0, 0);(时间完成度,动画完成度)</li>
+<li>Keyframe keyframe3 = Keyframe.ofFloat(0, 0);(时间完成度,动画完成度)</li>
+<li>PropertyValuesHolder holder = PropertyValuesHolder.ofKeyframe(“progress”, keyframe1, keyframe2, keyframe3);</li>
+<li>ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(view, holder);</li>
+<li>animator.start();  </li>
+</ul>
+<h2 id="ValueAnimator"><a href="#ValueAnimator" class="headerlink" title="ValueAnimator"></a>ValueAnimator</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[自定义View_6_属性动画_1]]></title>
       <url>/2017/09/14/%E8%87%AA%E5%AE%9A%E4%B9%89View_6_%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB_1/</url>
       <content type="html"><![CDATA[<h2 id="ViewPropertyAnimator"><a href="#ViewPropertyAnimator" class="headerlink" title="ViewPropertyAnimator"></a>ViewPropertyAnimator</h2><ul>
